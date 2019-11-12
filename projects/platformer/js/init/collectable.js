@@ -35,11 +35,10 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable.create(type.steve, 200, 170, 6, 0.7);
-        createCollectable.create(type.max, 300, 200, 5, 0.5);
-        createCollectable.create(type.max, 1000, 500, 300, 6, 1)
-        createCollectable(type.kennedi, 200, 170, 6, 0.7);
-        
+        collectable.create(type.steve, 275, 500, 6, 0.7);
+        collectable.create(type.db, 400, 300, 5, 0.5);
+        collectable.create(type.max, 600, 100, 300, 1, 0.7);
+        collectable.create(type.kennedi, 250, 100, 7, 0.7);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
