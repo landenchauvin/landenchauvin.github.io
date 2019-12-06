@@ -31,8 +31,19 @@
     //////////////////////////////////////////////////////////////////
     
     // TODO 2 - Variable declarations 
+    var positionX = 0;
+    var points = 0;
+    var speed = 10;
     
-
+    var positionY;
+    var directionY;
+    
+    box.css('top', positionY);
+    var boardHeight = jQuery(window).height();
+    var randNum = Math.random() * 100;
+var colorStr = "rgb(50, 25, 250)";
+box.css('background-color', colorStr);
+var randomNumberBetween0and10 = Math.random() * 10;
     
     /* 
     This Function will be called 20 times/second. Each time it is called,
@@ -40,17 +51,29 @@
     turn it around! 
     */
     function update() {
-        
-
+        positionX = positionX + speed;
+        moveBoxTo(positionX);
+        if (positionX > boardWidth) {
+            speed = -speed;
+        } if (positionX < 0) {
+            speed = speed * -1;
+        }
     };
-
+setInterval(update, 50);
+var interval = setInterval(update, 50);
+function endGame() {
+    clearInterval(interval);
+}
     /* 
     This Function will be called each time the box is clicked. Each time it is called,
     it should increase the points total, increase the speed, and move the box to
     the left side of the screen.
     */
     function handleBoxClick() {
-        
+        positionX = 0;
+        points = points + 1;
+        changeBoxText(points);
+        speed = speed * 3;
 
 
     };
