@@ -35,16 +35,6 @@
     var points = 0;
     var speed = 10;
     
-    var positionY;
-    var directionY;
-    
-    box.css('top', positionY);
-    var boardHeight = jQuery(window).height();
-    var randNum = Math.random() * 100;
-var colorStr = "rgb(50, 25, 250)";
-box.css('background-color', colorStr);
-var randomNumberBetween0and10 = Math.random() * 10;
-    
     /* 
     This Function will be called 20 times/second. Each time it is called,
     it should move the Box to a new location. If the box drifts off the screen
@@ -73,7 +63,7 @@ function endGame() {
         positionX = 0;
         points = points + 1;
         changeBoxText(points);
-        speed = speed * 3;
+        speed = speed + 3;
 
 
     };
