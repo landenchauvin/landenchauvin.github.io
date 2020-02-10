@@ -65,6 +65,7 @@ var init = function (window) {
                  game.checkCirclePosition(eachCircle);
          }
            }
+           //test code--delete after confirnming change
     // code to repeat using eachValue
          
        
